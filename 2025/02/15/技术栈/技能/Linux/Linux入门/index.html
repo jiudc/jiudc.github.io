@@ -1,0 +1,1307 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/logo.ico">
+  <link rel="icon" href="/img/logo.ico">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Charles">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="LinuxLinux入门​ 开源、免费的操作系统。 Linux目录结构 &#x2F;bin：二进制目录，存放许多用户级的GNU工具00 &#x2F;boot：启动目录 &#x2F;dev：设备目录，Linux在这里创建设备节点 &#x2F;etc：系统配置文件目录 &#x2F;home：主目录，Linux在这里创建设备节点 &#x2F;lib：库目 &#x2F;media：媒体目录，可移动媒体设备">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux入门">
+<meta property="og:url" content="https://jiudc.github.io/2025/02/15/%E6%8A%80%E6%9C%AF%E6%A0%88/%E6%8A%80%E8%83%BD/Linux/Linux%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="Charles&#39;s Blog">
+<meta property="og:description" content="LinuxLinux入门​ 开源、免费的操作系统。 Linux目录结构 &#x2F;bin：二进制目录，存放许多用户级的GNU工具00 &#x2F;boot：启动目录 &#x2F;dev：设备目录，Linux在这里创建设备节点 &#x2F;etc：系统配置文件目录 &#x2F;home：主目录，Linux在这里创建设备节点 &#x2F;lib：库目 &#x2F;media：媒体目录，可移动媒体设备">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-15T13:10:36.000Z">
+<meta property="article:modified_time" content="2025-09-14T09:26:29.209Z">
+<meta property="article:author" content="Charles">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>Linux入门 - Charles&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"jiudc.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2025-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Charles&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/background.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Linux入门"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-02-15 21:10" pubdate>
+          2025年2月15日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          33 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Linux入门</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><h2 id="Linux入门"><a href="#Linux入门" class="headerlink" title="Linux入门"></a>Linux入门</h2><p>​ 开源、免费的操作系统。</p>
+<h2 id="Linux目录结构"><a href="#Linux目录结构" class="headerlink" title="Linux目录结构"></a>Linux目录结构</h2><ul>
+<li>&#x2F;bin：二进制目录，存放许多用户级的GNU工具00</li>
+<li>&#x2F;boot：启动目录</li>
+<li>&#x2F;dev：设备目录，Linux在这里创建设备节点</li>
+<li>&#x2F;etc：系统配置文件目录</li>
+<li>&#x2F;home：主目录，Linux在这里创建设备节点</li>
+<li>&#x2F;lib：库目</li>
+<li>&#x2F;media：媒体目录，可移动媒体设备常用的挂载点</li>
+<li>&#x2F;mnt：挂载目录</li>
+<li>&#x2F;opt：可选目录，用于存放第三方软件包和数据文件</li>
+<li>&#x2F;proc：进程目录，存放现有硬件及当前进程</li>
+<li>&#x2F;root：root用户的主目录</li>
+<li>&#x2F;sbin：系统二进制目录</li>
+<li>&#x2F;run：运行目录，存放系统运行时的运行时数据</li>
+<li>&#x2F;srv：服务目录，存放本地服务相关文件</li>
+<li>&#x2F;sys：系统目录，存放系统硬件信息的相关文件</li>
+<li>&#x2F;tmp：临时文件</li>
+<li>&#x2F;usr：用户二进制文件</li>
+<li>&#x2F;var：可变目录，可存放经常变化的文件，如日志</li>
+</ul>
+<h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><h3 id="关机重启"><a href="#关机重启" class="headerlink" title="关机重启"></a>关机重启</h3><ul>
+<li>shutdown<ul>
+<li>shutdown -h now：立即关机</li>
+<li>shutdown -h 1:一分钟后关机</li>
+<li>shutdow -r now：立即重启</li>
+</ul>
+</li>
+<li>halt：直接使用，等于关机</li>
+<li>reboot：重启系统</li>
+<li>syn：把内存的数据同步到磁盘</li>
+<li>logout：注销</li>
+</ul>
+<h3 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h3><ul>
+<li>添加用户：useradd [选项] 用户（创建默认组；创建home目录）<ul>
+<li>useradd -d &#x2F;home&#x2F;trigger&#x2F; gemsuser</li>
+</ul>
+</li>
+<li>指定或修改密码：passwd gemsuser</li>
+<li>删除用户：userdel 用户名<ul>
+<li>保留home目录：userdel 用户</li>
+<li>不保留home目录：userdel -r 用户</li>
+</ul>
+</li>
+<li>查询用户信息：id 用户名</li>
+<li>切换用户：su -</li>
+<li>查询用户：whoami</li>
+</ul>
+<h3 id="用户组"><a href="#用户组" class="headerlink" title="用户组"></a>用户组</h3><ul>
+<li>组件组：groupadd 组名</li>
+<li>删除组：groupdel 组名</li>
+<li>增加用户指定组：useradd - g 用户组 用户名</li>
+<li>修改用户组：usermod -g 用户组 用户名</li>
+</ul>
+<h3 id="用户和组的相关文件"><a href="#用户和组的相关文件" class="headerlink" title="用户和组的相关文件"></a>用户和组的相关文件</h3><ul>
+<li>&#x2F;etc&#x2F;passwd :用户配置文件（用户信息）</li>
+<li>&#x2F;etc&#x2F;group：组配置文件（组信息），组名 口令 组ID 组内用户列表</li>
+<li>&#x2F;etc&#x2F;shadow：口令配置文件，密码等</li>
+</ul>
+<h2 id="实用指令"><a href="#实用指令" class="headerlink" title="实用指令"></a>实用指令</h2><h3 id="指定运行界别"><a href="#指定运行界别" class="headerlink" title="指定运行界别"></a>指定运行界别</h3><ul>
+<li>0：关机</li>
+<li>1：单用户（找回丢失密码）</li>
+<li>2：多用户（无网络服务）</li>
+<li>3：多用户（有网络服务）</li>
+<li>4：保留</li>
+<li>5：图形界面</li>
+<li>6：重启</li>
+</ul>
+<p>​ 系统的运行级别配置文件&#x2F;etc&#x2F;inittab</p>
+<p>切换到运行级别的指令：init [0123456]</p>
+<h3 id="如何找回root密码"><a href="#如何找回root密码" class="headerlink" title="如何找回root密码"></a>如何找回root密码</h3><ul>
+<li>进入单用户模式，修改密码</li>
+<li>开机-&gt;引导时输入回车键-&gt;e-&gt;选择第二行（编辑内核）再输入e-&gt;在这行最后输入1-&gt;回车键-&gt;b，进入单用户模式</li>
+</ul>
+<h3 id="帮助指令"><a href="#帮助指令" class="headerlink" title="帮助指令"></a>帮助指令</h3><p>man [命令或者配置文件] 指令</p>
+<p>help 命令</p>
+<h3 id="文件目录类"><a href="#文件目录类" class="headerlink" title="文件目录类"></a>文件目录类</h3><ul>
+<li>pwd</li>
+<li>ls：<ul>
+<li>-F,区分文件夹文件,-R递归,-a全部，-l显示长列表,ls -alF</li>
+<li>-l my_script，过滤匹配输出列表</li>
+<li>-l –time&#x3D;atime，才可以显示文件的访问时间，否则默认显示修改时间</li>
+<li>-d只列出目录</li>
+<li>-i查看文件或者目录的inode编号</li>
+</ul>
+</li>
+<li>mkdir -p,递归目录创建</li>
+<li>rmdir：删除空目录</li>
+<li>创建文件：touch filename,也可用于改变修改日期，若想改变访问时间，可加上参数-a</li>
+<li>复制：cp src dst，cp -i覆盖前会提示</li>
+<li>递归复制：cp -r<ul>
+<li>\cp 强制覆盖，不提示覆盖</li>
+</ul>
+</li>
+<li>rm<ul>
+<li>-r：递归真个文件夹</li>
+<li>-f：不提示</li>
+</ul>
+</li>
+<li>mv</li>
+<li>cat file，查看文件，-n行号，-b行数（不包括空行<ul>
+<li>cat -n &#x2F;etc&#x2F;profile |more</li>
+</ul>
+</li>
+<li>cat -T不让制表符出现，一旦开始无法控制后面操作</li>
+<li>more显示文本文件，会在显示每页数据后停下来<ul>
+<li>空格键：向下翻一页</li>
+<li>Enter：一行</li>
+<li>q：退出</li>
+<li>Ctrl+F：向下滚动一屏</li>
+<li>Ctrl+B：向上</li>
+<li>&#x3D;：输出当前的行号</li>
+<li>：f 输出文件名和当前的行号</li>
+<li>！ 调用shell，并执行命令</li>
+</ul>
+</li>
+<li>less，more的升级版（查看大文件）<ul>
+<li>&#x2F;pattern：匹配，n下一个，N前一个</li>
+<li>？pattern</li>
+<li>CTRL+f\b\d\u</li>
+</ul>
+</li>
+<li>查看部分文件tail,默认情况显示文件的末尾10行</li>
+<li>tail -n 2 log_file显示末尾2行，-f参数允许其他进程使用该文件时查看文件类容，hi保持活动状态，并不断显示添加到文件的内容。实时监测系统日志</li>
+<li>head，显示开头，head -5 log_file</li>
+<li>重定向和追加<ul>
+<li>&gt; 覆盖</li>
+<li>&gt;&gt;追加</li>
+</ul>
+</li>
+<li>链接文件：ln -s src dst，软链接<ul>
+<li>删除软连接时&#x3D;&#x3D;不要带斜杠&#x3D;&#x3D;</li>
+</ul>
+</li>
+<li>ln src dst，硬链接，完全一样</li>
+<li>history<ul>
+<li>history 10</li>
+<li>!178</li>
+</ul>
+</li>
+</ul>
+<h3 id="时间日期类"><a href="#时间日期类" class="headerlink" title="时间日期类"></a>时间日期类</h3><ul>
+<li>date<ul>
+<li>date</li>
+<li>date “+%Y %m %d %H %M %S”</li>
+<li>设置日期：data -s “2020-2-2 22:22:22”</li>
+</ul>
+</li>
+<li>cal：显示日历时间<ul>
+<li>cal</li>
+<li>cal 2020</li>
+</ul>
+</li>
+</ul>
+<h3 id="搜索查找类"><a href="#搜索查找类" class="headerlink" title="搜索查找类"></a>搜索查找类</h3><ul>
+<li>find<ul>
+<li>find &#x2F; -name xxname</li>
+<li>find &#x2F; -user gemsuser</li>
+<li>find &#x2F; -size +20M&#x2F;-10K&#x2F;30G</li>
+</ul>
+</li>
+<li>locate：在第一次运行前，必须使用updatedb指令创建locate数据库，可用于快速定位<ul>
+<li>updatedb</li>
+<li>locate xxxx</li>
+</ul>
+</li>
+<li>grep<ul>
+<li>-n：显示匹配行及行号</li>
+<li>-i：忽略大小写</li>
+</ul>
+</li>
+</ul>
+<h3 id="压缩和解压缩"><a href="#压缩和解压缩" class="headerlink" title="压缩和解压缩"></a>压缩和解压缩</h3><ul>
+<li><p>gzip：压缩后，不保留原文件。gzip xx</p>
+</li>
+<li><p>gunzip</p>
+</li>
+<li><p>zip：zip [选项] xxx.zip 目录</p>
+<ul>
+<li>-r：递归压缩</li>
+</ul>
+</li>
+<li><p>unzip</p>
+<ul>
+<li>-d：解压目的目录</li>
+</ul>
+</li>
+<li><p>tar：tzr -zvbf xx.tar.gz file1 file2</p>
+<ul>
+<li>-c：产生tar打包文件</li>
+<li>-v：显示信息</li>
+<li>-f：指定文件名</li>
+<li>-z：压缩</li>
+<li>-x：解压</li>
+<li>tar -xzvf xx.tar.gz -C &#x2F;opt&#x2F;</li>
+</ul>
+</li>
+<li><p>file能探测文件的内部，知晓文件的类型</p>
+</li>
+<li><p>查看进程ps，默认情况下ps显示运行在当前控制台下的属于当前用户的进程</p>
+<ul>
+<li>n -A，显示所有进程</li>
+<li>n -N，显示与指定参数不符的所有进程</li>
+<li>n -a，显示除控制进程和无终端进程外的所有进程</li>
+<li>n -d，显示除控制进程外的所有进程</li>
+<li>n -e，显示所有进程</li>
+<li>n -C cmdlist，显示包含挂在cmdlist列表中的进程</li>
+<li>n -G grplist，显示组ID在grplist列表中的进程</li>
+<li>n -U userlist，显示属主的用户ID在userlist列表中的进程</li>
+<li>n -l，显示长列表</li>
+<li>n -f，显示完整格式输出</li>
+</ul>
+</li>
+<li><p>ps -ef,ps -l,ps –forest</p>
+</li>
+<li><p>top，实时显示进程</p>
+</li>
+<li><p>kill pid，-s强终止</p>
+</li>
+<li><p>killall 进程名</p>
+</li>
+<li><p>mount 输出当前系统挂载的设备</p>
+</li>
+<li><p>mount –t type directory，type指定了磁盘被格式化的文件系统，该命令需要root权限</p>
+</li>
+<li><p>vfat-Windows长文件系统</p>
+</li>
+<li><p>ntfs-高级文件系统</p>
+</li>
+<li><p>iso9660-标准CD-ROM文件系统</p>
+</li>
+<li><p>mount参数</p>
+<ul>
+<li>ro：以只读形式挂载</li>
+<li>rw：读写</li>
+<li>user：允许普通用户挂载文件系统</li>
+<li>check&#x3D;none：挂载文件系统的时候不进行完整性检查</li>
+<li>loop：挂载一个文件</li>
+</ul>
+</li>
+<li><p>umount：卸载，卸载的时候提示系统可用lsof &#x2F;path&#x2F;device&#x2F;node获取它的进程信息</p>
+</li>
+<li><p>df：可以查询已挂载磁盘的使用情况，-h参数可以按照用户易读的形式显示</p>
+</li>
+<li><p>du：会显示当前目录下所有的文件、目录和子目录的磁盘使用情况</p>
+<ul>
+<li>n -c：显示所有已列出文件总的大小</li>
+<li>n -h：易读</li>
+<li>n -s：显示每个输出参数的总计</li>
+</ul>
+</li>
+<li><p>sort：排序le</p>
+<ul>
+<li>b：排序时候忽略起始的空白</li>
+<li>C：不排序，如果数据无序也不要报告</li>
+<li>c：不排序，但检查输入数据是不是已排序；未排序报告</li>
+<li>d：仅考虑空白和字母，不考虑特殊字符</li>
+<li>f：默认情况下，会将大写字母排在前面；这个参数会忽略大小写</li>
+<li>g：按通用数值来排序，把值当做浮点数</li>
+<li>i：在排序时忽略不可打印字符</li>
+<li>k pos1 pos2：排序从pos1位置开始，如果指定了pos2，到pos2位置结束</li>
+<li>M：按照三字符月份名按月份排序</li>
+<li>m：将两个已排序的数据文件合并</li>
+<li>n：按字符串数值来排序，不转换为浮点数</li>
+<li>o file：将排序结果写出到指定的文件中</li>
+<li>R file：按随机生成的散列表的键值排序</li>
+<li>r：反序排序</li>
+<li>S size：指定使用内存的大小</li>
+<li>s：禁用最后重排序比较</li>
+<li>T dir：指定一个位置来存储临时工作文件</li>
+<li>t sep：指定一个用来区分键位置的字符</li>
+<li>u：和-c参数一起使用，检查严格排序；当不和-c一起使用，仅输出第一例相似的两行</li>
+<li>z：用NULL字符作为行尾，而不是用换行符</li>
+</ul>
+</li>
+<li><p>搜索数据：grep pattern file</p>
+<ul>
+<li>v：方向搜索，输出不匹配该模式的行</li>
+<li>n：显示匹配模式的行所在的行号</li>
+<li>c：只需要知道多少行匹配</li>
+<li>e：若需要制定多个匹配模式，可用-e来制定每个模式：grep –e t –e f file</li>
+</ul>
+</li>
+<li><p>压缩数据</p>
+<ul>
+<li>gzip：压缩文件，.gz</li>
+<li>gzcat：用来查看压缩过的文本文件的内容</li>
+<li>gunzip：用来解压文件</li>
+</ul>
+</li>
+<li><p>归档数据：tar –cvf –tf –xvf(.tar) -xzvf(.tgz)</p>
+<ul>
+<li>A：将一个已有tar归档文件追加到另一个已有tar归档文件</li>
+<li>c：创建一个新的tar归档文件</li>
+<li>d：检查归档文件和文件系统的不用之处</li>
+<li>r：追加文件到已有tar归档文件结尾</li>
+<li>u：将比tar归档文件中已有的同名文件新的文件追加到该tar归档文件中</li>
+<li>x：从已有tar归档文件中提取文件</li>
+<li>C dir：切换到指定目录</li>
+<li>f file：输出结果到文件或设备file</li>
+<li>j：将输出重定向给bzip2命令来压缩内容</li>
+<li>p：保留所有文件权限</li>
+<li>v：在处理文件时显示文件</li>
+<li>z：将输出重定向给gzip命令来压缩内容</li>
+</ul>
+</li>
+<li><p>进程列表：(pwd; ls; cd&#x2F;etc; echo $BASH_SUBSHELL)，若echo命令返回零，则表示没有子shell，若大于零，则表明存在shell。{}这个花括号不会创建子shell而[]会</p>
+</li>
+<li><p>sleep 10&amp;:睡眠10s</p>
+</li>
+<li><p>jobs：显示当前运行在后台的作业 jobs -l还可显示命令的PID</p>
+</li>
+<li><p>后台运行：(tar *)&amp;</p>
+</li>
+<li><p>协程：在后台生成一个shell，并在这个shell中执行命令。coproc My_job { sleep 10; }</p>
+</li>
+</ul>
+<h2 id="组管理"><a href="#组管理" class="headerlink" title="组管理"></a>组管理</h2><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>​ 文件：所有者、所在组、其他组</p>
+<ul>
+<li>改变文件所有者：chown 用户名 文件名</li>
+<li>组的创建：groupadd 组名</li>
+<li>修改文件所在组：chgrp 组名 文件名</li>
+<li>其他组：排除所有者和所在组</li>
+<li>修改用户所在组：usermod -g 组名 用户名</li>
+<li>修改用户登录目录：usermod -d 目录名 用户名 改变该用户登录的初始目录</li>
+</ul>
+<h3 id="权限基本介绍"><a href="#权限基本介绍" class="headerlink" title="权限基本介绍"></a>权限基本介绍</h3><ul>
+<li>rwx[421]</li>
+</ul>
+<h3 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h3><ul>
+<li>chmod：chmod u&#x3D;rwx,g&#x3D;rx,o&#x3D;x 文件名<ul>
+<li>u、g、o、a（所有）</li>
+<li>chmod 751 文件名</li>
+<li>-R 递归修改</li>
+</ul>
+</li>
+<li>chown<ul>
+<li>chown -R gemsuser &#x2F;</li>
+<li>chown newowner:newgroup file</li>
+</ul>
+</li>
+<li>chgrp</li>
+</ul>
+<h2 id="定时任务调度"><a href="#定时任务调度" class="headerlink" title="定时任务调度"></a>定时任务调度</h2><ul>
+<li>crond任务调度<ul>
+<li>-e：编辑<ul>
+<li>第几分钟 0~59</li>
+<li>第几小时 0~23</li>
+<li>第几天 1~31</li>
+<li>第几月 1~12</li>
+<li>星期几 0~7（0和7都代表星期日）</li>
+<li>*任何时间</li>
+<li>,不连续时间</li>
+<li>-范围</li>
+<li>*&#x2F;n,每隔多久</li>
+</ul>
+</li>
+<li>-l：显示</li>
+<li>-r：删除</li>
+<li>service crond restart：重启任务调度</li>
+</ul>
+</li>
+</ul>
+<h2 id="磁盘分区挂载"><a href="#磁盘分区挂载" class="headerlink" title="磁盘分区挂载"></a>磁盘分区挂载</h2><h4 id="Linux分区"><a href="#Linux分区" class="headerlink" title="Linux分区"></a>Linux分区</h4><ul>
+<li>mbr</li>
+<li>gtp</li>
+</ul>
+<h4 id="硬盘说明"><a href="#硬盘说明" class="headerlink" title="硬盘说明"></a>硬盘说明</h4><ul>
+<li>IDE：hdx hda3-第一个IDE银盘上的第三个分区</li>
+<li>SCSI：sdx</li>
+</ul>
+<p>lsblk -f：查看系统分区和挂载的磁盘</p>
+<h4 id="挂载经典案例"><a href="#挂载经典案例" class="headerlink" title="挂载经典案例"></a>挂载经典案例</h4><ol>
+<li>fdisk &#x2F;dev&#x2F;sdb</li>
+<li>mkfs - t ext4 &#x2F;dev&#x2F;sdb1</li>
+<li>mount &#x2F;dev&#x2F;sdb1 &#x2F;home&#x2F;newdisk（临时挂载）</li>
+<li>永久挂载：vi &#x2F;etc&#x2F;fstab<br>mount -a及时生效</li>
+</ol>
+<h4 id="磁盘情况查询"><a href="#磁盘情况查询" class="headerlink" title="磁盘情况查询"></a>磁盘情况查询</h4><ul>
+<li>df -hl</li>
+<li>du -h &#x2F;目录<ul>
+<li>-a含文件</li>
+<li>–max-depth&#x3D;1子目录深度<ul>
+<li>统计文件个数 ls -l &#x2F;home|grep “^-”|wc -l</li>
+<li>统计目录个数 ls -l &#x2F;home|grep “^d”|wc -l</li>
+<li>统计文件个数包括子目录ls -lR &#x2F;home|grep “^-”|wc -l</li>
+<li>以树状图 tree</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h2><ul>
+<li>ifconfig</li>
+<li>ping</li>
+<li>指定固定ip：vi &#x2F;etc&#x2F;sysconfig&#x2F;netwok-scripts&#x2F;ifconfig-eth0,static,dns,gateway,onboot&#x3D;yes</li>
+<li>server network restart</li>
+</ul>
+<h4 id="修改主机名"><a href="#修改主机名" class="headerlink" title="修改主机名"></a>修改主机名</h4><ul>
+<li>hostname</li>
+<li>vim &#x2F;etc&#x2F;sysconfig&#x2F;network:HOSTNAME:yourname</li>
+<li>vim &#x2F;etc&#x2F;hosts</li>
+</ul>
+<h2 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h2><h4 id="显示系统执行的进程"><a href="#显示系统执行的进程" class="headerlink" title="显示系统执行的进程"></a>显示系统执行的进程</h4><ul>
+<li>ps<ul>
+<li>-a：显示当前终端所有的进程</li>
+<li>-u：以用户的格式显示进程信息</li>
+<li>-x：显示后台进程运行的参数</li>
+<li>-ef：查看父进程</li>
+</ul>
+</li>
+</ul>
+<h4 id="终止进程"><a href="#终止进程" class="headerlink" title="终止进程"></a>终止进程</h4><ul>
+<li>kill<ul>
+<li>-9</li>
+</ul>
+</li>
+<li>killall<ul>
+<li>killall gedit</li>
+</ul>
+</li>
+<li>pstree<ul>
+<li>-p：显示进程的PID</li>
+<li>-u：显示所属的用户</li>
+</ul>
+</li>
+</ul>
+<h2 id="服务管理"><a href="#服务管理" class="headerlink" title="服务管理"></a>服务管理</h2><h3 id="管理指令"><a href="#管理指令" class="headerlink" title="管理指令"></a>管理指令</h3><ul>
+<li>service<ul>
+<li>service sshd status</li>
+</ul>
+</li>
+<li>&#x2F;etc&#x2F;init.d：列出系统那些服务</li>
+<li>vi &#x2F;etc&#x2F;inittab：查看或者修改运行级别</li>
+<li>chkconfig：可以给每个服务的各个运行级别的自启动<ul>
+<li>chkconfig –list|grep sshd</li>
+<li>chkconfig –level 5 sshd off</li>
+</ul>
+</li>
+</ul>
+<h3 id="动态监控进程"><a href="#动态监控进程" class="headerlink" title="动态监控进程"></a>动态监控进程</h3><ul>
+<li>top<ul>
+<li>-d:top -d 10刷新时间</li>
+<li>-i:</li>
+<li>-p:</li>
+<li>u：查看特定用户</li>
+<li>k：进程号，杀进程</li>
+<li>P：cpu排序</li>
+<li>M：按内存排序</li>
+<li>N：pid排序</li>
+</ul>
+</li>
+</ul>
+<h3 id="监看网络情况"><a href="#监看网络情况" class="headerlink" title="监看网络情况"></a>监看网络情况</h3><ul>
+<li>netstat<ul>
+<li>-an：按一定排序排列输出</li>
+<li>-p：显示那个进程在调用</li>
+<li>netstat -anp|more</li>
+<li>netstat -tunlp</li>
+</ul>
+</li>
+</ul>
+<h2 id="RPM和YUM"><a href="#RPM和YUM" class="headerlink" title="RPM和YUM"></a>RPM和YUM</h2><h3 id="RPM"><a href="#RPM" class="headerlink" title="RPM"></a>RPM</h3><p>readhat package manager</p>
+<ul>
+<li>rpm -qa|grep xx</li>
+<li>rpm -q foxmail</li>
+<li>rpm -qi foxmail</li>
+<li>rpm -ql foxmail：查看安装位置</li>
+<li>rpm -qf &#x2F;etc&#x2F;passwd：查询文件属于哪个包</li>
+<li>rpm -e RPM包名称：卸载</li>
+<li>rpm -e -nodeps：强制删除</li>
+<li>rpm -ivh foxmail<ul>
+<li>-i：install</li>
+<li>-v：verbose提示</li>
+<li>-h：hash进度条</li>
+</ul>
+</li>
+</ul>
+<h3 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h3><ul>
+<li>yum list|grep xx</li>
+<li>yum install xx</li>
+</ul>
+<h2 id="内建命令"><a href="#内建命令" class="headerlink" title="内建命令"></a>内建命令</h2><h3 id="外部命令"><a href="#外部命令" class="headerlink" title="外部命令"></a>外部命令</h3><ul>
+<li>which ps</li>
+<li>type -a ps</li>
+</ul>
+<p>当外部命令执行时，会创建出一个子进程。这种操作成为衍生(forking)</p>
+<h3 id="内建命令-1"><a href="#内建命令-1" class="headerlink" title="内建命令"></a>内建命令</h3><p>​ 不需要子进程来执行，如cd、exit。命令有多种形式，要查看命令的不同实现，使用type命令的-a选项，which只显示外部命令文件</p>
+<ul>
+<li>history：查看历史命令</li>
+<li>！！：会从shell历史记录中换回的命令，然后执行该命令</li>
+<li>history -a：在打开的会话向.bash_history添加记录</li>
+<li>history -n：要强制读取.bah_history文件，可以使用history -n命令</li>
+<li>！n：可用于执行该行指令</li>
+<li>alias -p：查看当前可用别名</li>
+<li>alias li&#x3D;’ls -li’;</li>
+</ul>
+<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><h3 id="全局环境变量"><a href="#全局环境变量" class="headerlink" title="全局环境变量"></a>全局环境变量</h3><ul>
+<li>printenv HOME</li>
+<li>env $HOME</li>
+<li>创建全局变量：my_variable &#x3D; ”I am Global now”; export my_variable</li>
+<li>子shell无法使用export改变父shell中全局变量的值</li>
+</ul>
+<h3 id="局部环境变量"><a href="#局部环境变量" class="headerlink" title="局部环境变量"></a>局部环境变量</h3><ul>
+<li>set：显示特定进程设置的所有环境变量，包括局部变量、全部变量和用户定义变量</li>
+<li>echo $my_variable; my_variable&#x3D;”hello world‘’</li>
+</ul>
+<h3 id="删除环境变量"><a href="#删除环境变量" class="headerlink" title="删除环境变量"></a>删除环境变量</h3><ul>
+<li>unset my_variable</li>
+</ul>
+<h3 id="设置PATH环境变量"><a href="#设置PATH环境变量" class="headerlink" title="设置PATH环境变量"></a>设置PATH环境变量</h3><ul>
+<li>PATH&#x3D;$PATH:dir,对PATH的修改只能持续到推出或者重启系统</li>
+</ul>
+<h3 id="永久改变环境变量"><a href="#永久改变环境变量" class="headerlink" title="永久改变环境变量"></a>永久改变环境变量</h3><ul>
+<li>登录shell<ul>
+<li>&#x2F;etc&#x2F;profile</li>
+<li>$HOME&#x2F;.bash_profile</li>
+<li>$HOME&#x2F;.bashrc</li>
+<li>$HOME&#x2F;.bash_login</li>
+<li>$HOME&#x2F;.profile</li>
+<li>$HOME下，shell会按照以上黄色标记顺序执行，运行第一个找到的文件，其余会被忽略</li>
+</ul>
+</li>
+<li>交互式shell：不是登录系统时启动的，检查HOME目录下的.bashrc文件</li>
+<li>非交互式shell：BASH_ENV环境变量</li>
+</ul>
+<h3 id="数组变量"><a href="#数组变量" class="headerlink" title="数组变量"></a>数组变量</h3><ul>
+<li><p>mytest&#x3D;(ont two three)</p>
+</li>
+<li><p>echo ${mytest[*]}</p>
+</li>
+<li><p><strong>获取数组长度</strong></p>
+<ul>
+<li>arr_length&#x3D;$：返回最后一个变量名</li>
+</ul>
+</li>
+<li><p>$*：将变量当成单个参数</p>
+</li>
+<li><p>$@：会单独处理每个参数</p>
+</li>
+<li><p>shift：左移，$1会丢失，$0不变</p>
+</li>
+<li><p>shift n</p>
+</li>
+<li><p>#：去掉左边</p>
+</li>
+<li><p>%：去掉右</p>
+</li>
+<li><p>单一符号是最小匹配，两个符号是最大匹配</p>
+</li>
+<li><p>${file:0:5}：提取最左边的5个字</p>
+</li>
+<li><p>对变量值的字符串做替换：</p>
+<ul>
+<li>${file&#x2F;dir&#x2F;path}：将一个dir替换为path</li>
+<li>$(file&#x2F;&#x2F;dir&#x2F;pah)：将全部dir替换为path</li>
+<li>${file#<em>&#x2F;}：删掉第一个 &#x2F; 及其左边的字符串</em></li>
+<li><em>${file##</em>&#x2F;}：删掉最后一个 &#x2F; 及其左边的字符串</li>
+<li>${file#<em>.}：删掉第一个 . 及其左边的字符串</em></li>
+<li><em>${file##</em>.}：删掉最后一个 . 及其左边的字符串</li>
+<li>${file%&#x2F;<em>}：删掉最后一个 &#x2F; 及其右边的字符串</em></li>
+<li><em>${file%%&#x2F;</em>}：删掉第一个 &#x2F; 及其右边的字符串</li>
+<li>${file%.<em>}：删掉最后一个 . 及其右边的字符串</em></li>
+<li><em>${file%%.</em>}：删掉第一个 . 及其右边的字符串</li>
+</ul>
+</li>
+<li><p>$$：本身的PID</p>
+</li>
+<li><p>$!：shell运行的最后的后台process的id</p>
+</li>
+<li><p>$*：”$1 $2 …$n”输出所有的参数</p>
+</li>
+<li><p>$@：”$1” … “$n”</p>
+</li>
+<li><p>$#：参数个数</p>
+</li>
+</ul>
+<h2 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h2><h3 id="Segmentation-fault-core-dumped"><a href="#Segmentation-fault-core-dumped" class="headerlink" title="Segmentation fault(core dumped)"></a>Segmentation fault(core dumped)</h3><ul>
+<li>在gcc编译的程序时使用”-g”选项，使编译文件带有调试信息</li>
+<li>检查Linux设置的在发生段错误时文件大小<ul>
+<li>ulimit -a</li>
+</ul>
+</li>
+<li>默认不产生，取消该限制<ul>
+<li>ulimit -c unlimited</li>
+</ul>
+</li>
+<li>用gdb分析core文件</li>
+<li>gdb {executable} {dump file</li>
+<li>bt：查看出错的堆栈(backtrace)</li>
+<li>frame {num}：分析每个栈桢中变量情况</li>
+<li>info locals：查看局部变量</li>
+<li>info args：查看参数</li>
+<li>where：查看调用参数</li>
+</ul>
+<h2 id="Nmon监控工具"><a href="#Nmon监控工具" class="headerlink" title="Nmon监控工具"></a>Nmon监控工具</h2><h3 id="非交互模式"><a href="#非交互模式" class="headerlink" title="非交互模式"></a>非交互模式</h3><ul>
+<li>-f：切换到非交互模式，必须是第一个参数</li>
+<li>-s：每多少秒采集一次数据</li>
+<li>-c：总共采集多少次数</li>
+<li>-t：包括Top进程的状态</li>
+<li>-m：指定生成的文件目录</li>
+</ul>
+<p>可用于生成尾号为.nmon的CSV文件，可使用nmon_analyser把nmon生成的文件转换为excel。</p>
+<p><a target="_blank" rel="noopener" href="http://www.ibm.com/developerworks/wikis/display/Wikiptype/nmonanalyser">http://www.ibm.com/developerworks/wikis/display/Wikiptype/nmonanalyser</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/" class="category-chain-item">技术栈</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/%E6%8A%80%E8%83%BD/" class="category-chain-item">技能</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/%E6%8A%80%E8%83%BD/Linux/" class="category-chain-item">Linux</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Linux入门</div>
+      <div>https://jiudc.github.io/2025/02/15/技术栈/技能/Linux/Linux入门/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Charles</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年2月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/02/15/%E6%8A%80%E6%9C%AF%E6%A0%88/%E6%8A%80%E8%83%BD/Linux/Shell%E8%84%9A%E6%9C%AC/" title="Shell脚本">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Shell脚本</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/02/15/%E6%8A%80%E6%9C%AF%E6%A0%88/%E8%81%8C%E5%9C%BA/%E6%96%B9%E6%B3%95%E8%AE%BA/10X%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B7%A5%E4%BD%9C%E6%B3%95/" title="10X程序员工作法">
+                        <span class="hidden-mobile">10X程序员工作法</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

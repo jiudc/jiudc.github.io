@@ -1,0 +1,822 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/logo.ico">
+  <link rel="icon" href="/img/logo.ico">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Charles">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="开篇词软件行业两个概念，本质复杂度（Essential Complexity）和偶然复杂度（Accident Complexity）。大部分程序员忙碌解决的问题，都不是程序问题，而是由偶然复杂度导致的问题。如何减少偶然复杂度引发的问题，让软件开发工作有序、高效地进行，是这个专题讨论的问题。 01 | 一个思考框架Where are we?（我们现在在哪？）Where are we going?（我">
+<meta property="og:type" content="article">
+<meta property="og:title" content="10X程序员工作法">
+<meta property="og:url" content="https://jiudc.github.io/2025/02/15/%E6%8A%80%E6%9C%AF%E6%A0%88/%E8%81%8C%E5%9C%BA/%E6%96%B9%E6%B3%95%E8%AE%BA/10X%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B7%A5%E4%BD%9C%E6%B3%95/index.html">
+<meta property="og:site_name" content="Charles&#39;s Blog">
+<meta property="og:description" content="开篇词软件行业两个概念，本质复杂度（Essential Complexity）和偶然复杂度（Accident Complexity）。大部分程序员忙碌解决的问题，都不是程序问题，而是由偶然复杂度导致的问题。如何减少偶然复杂度引发的问题，让软件开发工作有序、高效地进行，是这个专题讨论的问题。 01 | 一个思考框架Where are we?（我们现在在哪？）Where are we going?（我">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-15T12:59:36.000Z">
+<meta property="article:modified_time" content="2025-09-14T09:26:29.209Z">
+<meta property="article:author" content="Charles">
+<meta property="article:tag" content="方法论">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>10X程序员工作法 - Charles&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"jiudc.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2025-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Charles&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/background.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="10X程序员工作法"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-02-15 20:59" pubdate>
+          2025年2月15日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          28 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">10X程序员工作法</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="开篇词"><a href="#开篇词" class="headerlink" title="开篇词"></a>开篇词</h2><p>软件行业两个概念，本质复杂度（Essential Complexity）和偶然复杂度（Accident Complexity）。<br>大部分程序员忙碌解决的问题，都不是程序问题，而是由偶然复杂度导致的问题。<br>如何减少偶然复杂度引发的问题，让软件开发工作有序、高效地进行，是这个专题讨论的问题。</p>
+<h2 id="01-一个思考框架"><a href="#01-一个思考框架" class="headerlink" title="01 | 一个思考框架"></a>01 | 一个思考框架</h2><p>Where are we?（我们现在在哪？）<br>Where are we going?（我们要到哪儿去？）<br>How can we get there?（我们如何到达那里？）</p>
+<h3 id="四个思考原则"><a href="#四个思考原则" class="headerlink" title="四个思考原则"></a>四个思考原则</h3><p>给出思考框架是为了让你明白为什么要提出问题，而具体问题要怎么问，就可以遵循下面这四项原则：</p>
+<ul>
+<li><p>以终为始，确定好真实目标；</p>
+</li>
+<li><p>任务分解，找到实施路径；</p>
+</li>
+<li><p>沟通反馈，解决与人打交道出现的问题；</p>
+</li>
+<li><p>自动化，解决与机器打交道出现的问题。</p>
+<h2 id="02-以终为始：如何让你的努力不白费？"><a href="#02-以终为始：如何让你的努力不白费？" class="headerlink" title="02 | 以终为始：如何让你的努力不白费？"></a>02 | 以终为始：如何让你的努力不白费？</h2><p>任何事物都要经过两次创造：一次是在头脑中的创造，也就是智力上的或者第一次创造（Mental&#x2F;First Creation），然后才是付诸实践，也就是实际的构建或第二次创造（Physical&#x2F;Second Creation）。<br>对做软件的人来说，我们应该把“终”定位成做一个对用户有价值的软件，能够为别人带来价值，自己的价值才能体现出来。<br>践行“以终为始”就是在做事之前，先考虑结果，根据结果来确定要做的事情。</p>
+<h2 id="03-DoD的价值：你完成了工作，为什么他们还不满意？"><a href="#03-DoD的价值：你完成了工作，为什么他们还不满意？" class="headerlink" title="03 | DoD的价值：你完成了工作，为什么他们还不满意？"></a>03 | DoD的价值：你完成了工作，为什么他们还不满意？</h2><h3 id="理解的鸿沟"><a href="#理解的鸿沟" class="headerlink" title="理解的鸿沟"></a>理解的鸿沟</h3><p>双方的理解有差异，那就把这个差异弥合上。弥合差异的方式有很多，有一个最佳实践，它的名字叫 DoD（Definition of Done，完成的定义）。</p>
+<h3 id="完成的定义"><a href="#完成的定义" class="headerlink" title="完成的定义"></a>完成的定义</h3></li>
+<li><p>DoD 是一个清单，清单是由一个个的检查项组成的，用来检查我们的工作完成情况。</p>
+</li>
+<li><p>DoD 的检查项应该是实际可检查的。</p>
+</li>
+<li><p>DoD 是团队成员间彼此汇报的一种机制。当我们有了 DoD，做事只有两种状态，即“做完”和“没做完”。<br>DoD 是一个思维模式，是一种尽可能消除不确定性，达成共识的方式。<br><strong>在做任何事之前，先定义完成的标准。</strong></p>
+<h2 id="04-接到需求任务，你要先做哪件事？"><a href="#04-接到需求任务，你要先做哪件事？" class="headerlink" title="04 | 接到需求任务，你要先做哪件事？"></a>04 | 接到需求任务，你要先做哪件事？</h2><p>需求，是软件开发中的一个关键环节，一旦需求理解出现问题，势必会造成大量的浪费。传统的功能列表只是简单罗列了要实现的功能，丢失了大量的上下文，会导致团队成员对于需求“只见树木不见森林”。</p>
+<h3 id="用”用户故事”描述需求"><a href="#用”用户故事”描述需求" class="headerlink" title="用”用户故事”描述需求"></a>用”用户故事”描述需求</h3></li>
+<li><p>标题，简要地说明这个用户故事的主要内容</p>
+</li>
+<li><p>概述，简要地介绍这个用户故事的主要内容，一般会用这样的格式：<br>As a （Role）, I want to （Activity）, so that （Business Value）.</p>
+</li>
+<li><p>详述，详细地描述这个用户故事的完整流程，我们会把操作流程、用户界面等信息都放到这里。</p>
+</li>
+<li><p>验收标准，这个部分会描述一个正常使用的流程是怎样的，以及各种异常流程系统是如何给出响应的，这是程序员常常会欠缺的思考。它会把详述中很多叙述的部分变成一个具体的测试用例。<br>验收标准非常重要的一环是异常流程的描述。验收标准给出了这个需求最基本的测试用例，它保证了开发人员完成需求最基本的质量。<br><strong>在做任何需求或任务之前，先定好验收标准。</strong></p>
+<h2 id="05-持续集成：集成本身就是写代码的一个环节"><a href="#05-持续集成：集成本身就是写代码的一个环节" class="headerlink" title="05 | 持续集成：集成本身就是写代码的一个环节"></a>05 | 持续集成：集成本身就是写代码的一个环节</h2><p>在很长一段时间内，集成都是软件行业的难题，改动量和集成时间互相影响。<br>每日构建作为早期的一种“最佳实践”被提了出来，但因为它基本上都是原则，没有得到广泛的应用。当人们进一步“调小”参数后，诞生了一个更极致的实践：持续集成，也就是每次提交代码都进行集成。<br><strong>尽早提交代码去集成。</strong></p>
+<h2 id="06-精益创业：产品经理不靠谱，你该怎么办？"><a href="#06-精益创业：产品经理不靠谱，你该怎么办？" class="headerlink" title="06 | 精益创业：产品经理不靠谱，你该怎么办？"></a>06 | 精益创业：产品经理不靠谱，你该怎么办？</h2><p>我们必须要有自己的独立思考，多问几个为什么，尽可能减少掉到“坑”里之后再求救的次数。<br>但是随着互联网深入人心，软件开始向各个领域蔓延。越来越多的人进入到 IT 行业，不同的人开始在各个方向上进行尝试。这时候，软件开发的主流由面向确定性问题，逐渐变成了面向不确定性问题。</p>
+<h3 id="精益创业"><a href="#精益创业" class="headerlink" title="精益创业"></a>精益创业</h3><p>它要解决的是面向不确定性创造新事物。<br>那精益创业到底说的是什么呢？其实很简单。我们不是要面向不确定性创造新事物吗？既然是不确定的，那你唯一能做的事情就是“试”。<br>精益创业的方法论里，提出“开发（build）- 测量（measure）- 认知（learn）”这样一个反馈循环。就是说，当你有了一个新的想法（idea）时，就把想法开发成产品（code）投入市场，然后，收集数据（data）获取反馈。<br>最好的办法就是以最低的成本试，达成同样一个目标，尽可能少做事。精益创业提出一个非常重要的概念，最小可行产品，也就是许多人口中的 MVP（Minimum Viable Product）。简言之，少花钱，多办事。<br>精益创业提供给我们的是一个做产品的思考框架，我们能够接触到的大多数产品都可以放在这个框架内思考。<br><strong>：默认所有需求都不做，直到弄清楚为什么要做这件事。</strong></p>
+<h2 id="07-解决了很多技术问题，为什么你依然在“坑”里？"><a href="#07-解决了很多技术问题，为什么你依然在“坑”里？" class="headerlink" title="07 | 解决了很多技术问题，为什么你依然在“坑”里？"></a>07 | 解决了很多技术问题，为什么你依然在“坑”里？</h2><p>不同角色工作上真正的差异是上下文的不同。<br>虽然写的代码都一样，但你看到的是树木，人家看到的是森林，他更能从全局思考。</p>
+<h3 id="在更大的上下文工作"><a href="#在更大的上下文工作" class="headerlink" title="在更大的上下文工作"></a>在更大的上下文工作</h3><p>扩大自己工作的上下文，别把自己局限在一个“程序员”的角色上。</p>
+<h2 id="08-为什么说做事之前要先进行推演？"><a href="#08-为什么说做事之前要先进行推演？" class="headerlink" title="08 | 为什么说做事之前要先进行推演？"></a>08 | 为什么说做事之前要先进行推演？</h2><p>对比我们的工作，多数情况下，即便目标清晰，路径却是模糊的。所以，不同的人有不同的处理方式。有些人是走到哪算哪，然后再看；有些人则是先推演一下路径，看看能走到什么程度。<br>在军事上，人们将其称为沙盘推演，或沙盘模拟。<br><strong>在动手做一件事之前，先推演一番。</strong></p>
+<h2 id="09-你的工作可以用数字衡量吗？"><a href="#09-你的工作可以用数字衡量吗？" class="headerlink" title="09 | 你的工作可以用数字衡量吗？"></a>09 | 你的工作可以用数字衡量吗？</h2><p>一些人说，自己靠直觉就能把事情做好，其实这是一种误解，因为那种所谓的直觉，通常是一种洞见（Insight），洞见很大程度上依赖于一个人在一个领域长期的沉淀和积累，而这其实是某种意义上的大数据。</p>
+<h3 id="从数字出发"><a href="#从数字出发" class="headerlink" title="从数字出发"></a>从数字出发</h3></li>
+<li><p>重视测量指标，重视数字。</p>
+</li>
+<li><p>基于数字进行技术决策。</p>
+</li>
+<li><p>从数字中发现问题。<br>结合着“以终为始”的思考，如果我们可以在一开始，就设计好测量工作有效性的指标，那么就可以更有目的性地去工作了。<br>而如果我们习惯了用数字去思考，就可以在很多方面让数字帮助我们。我举了几个小例子，比如：基于数据进行技术决策、预先设定系统指标，以及发现系统中的问题等等。希望你也可以把数字思维带到你的日常工作中。<br><strong>问一下自己，我的工作是不是可以用数字衡量。</strong></p>
+<h2 id="10-迭代0-启动开发之前，你应该准备什么？"><a href="#10-迭代0-启动开发之前，你应该准备什么？" class="headerlink" title="10 | 迭代0: 启动开发之前，你应该准备什么？"></a>10 | 迭代0: 启动开发之前，你应该准备什么？</h2><p>一开始就把项目准备好的实践：迭代 0。</p>
+<h3 id="迭代-0-清单"><a href="#迭代-0-清单" class="headerlink" title="迭代 0 清单"></a>迭代 0 清单</h3></li>
+<li><p>需求方面</p>
+<ul>
+<li>细化过的迭代 1 需求</li>
+<li>交互<ul>
+<li>用户界面</li>
+<li>用户交互</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>技术方面</p>
+<ul>
+<li>基本<ul>
+<li>技术选型</li>
+<li>技术架构</li>
+</ul>
+</li>
+<li>数据库<ul>
+<li>数据库表结构</li>
+<li>数据库迁移</li>
+</ul>
+</li>
+<li>持续集成<ul>
+<li>持续集成服务器</li>
+<li>持续集成监视器</li>
+<li>构建脚本</li>
+</ul>
+</li>
+<li>测试<ul>
+<li>单元测试和集成测试</li>
+<li>端到端测试</li>
+</ul>
+</li>
+<li>发布<ul>
+<li>发布脚本</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>设计你的迭代 0 清单，给自己的项目做体检。</strong></p>
+<h2 id="答疑解惑-如何管理你的上级？"><a href="#答疑解惑-如何管理你的上级？" class="headerlink" title="答疑解惑 | 如何管理你的上级？"></a>答疑解惑 | 如何管理你的上级？</h2><p>第一，管理上级的预期。相当于我把自己看到的问题暴露给上级，让他选择。<br>第二，帮助上级丰富知识。<br>第三，说出你的想法。</p>
+<h2 id="划重点-关于“以终为始”，你要记住的9句话"><a href="#划重点-关于“以终为始”，你要记住的9句话" class="headerlink" title="划重点 | 关于“以终为始”，你要记住的9句话"></a>划重点 | 关于“以终为始”，你要记住的9句话</h2><p>我们学习到了一些行业最佳实践。</p>
+<ul>
+<li><p>DoD，确定好完成的定义，减少团队内部的理解不一致。</p>
+</li>
+<li><p>用户故事，细化出有价值的需求。</p>
+</li>
+<li><p>持续集成，通过尽早集成，减少改动量，降低集成的难度。</p>
+</li>
+<li><p>精益创业，减少过度开发不确定性产品带来的浪费。</p>
+</li>
+<li><p>迭代 0，在项目开始之前，做好一些基础准备。<br>还学习到一些重要的思维转变。</p>
+</li>
+<li><p>任何事物都要经过两次创造：一次是在头脑中的创造，也就是智力上的或者第一次创造（Mental&#x2F;First Creation），然后才是付诸实践，也就是实际的构建或第二次创造（Physical&#x2F;Second Creation）。</p>
+</li>
+<li><p>在更大的上下文内发现自己的“终”。</p>
+</li>
+<li><p>通过推演，找到通往“终”的路径。</p>
+</li>
+<li><p>用可度量的“数字”定义自己的“终”。</p>
+<h2 id="11-向埃隆·马斯克学习任务分解"><a href="#11-向埃隆·马斯克学习任务分解" class="headerlink" title="11 | 向埃隆·马斯克学习任务分解"></a>11 | 向埃隆·马斯克学习任务分解</h2><h3 id="软件开发的任务分解"><a href="#软件开发的任务分解" class="headerlink" title="软件开发的任务分解"></a>软件开发的任务分解</h3><p>一个大问题，我们都很难给出答案，但回答小问题却是我们擅长的。<br>用这种思路解决问题的难点是什么呢？给出一个可执行的分解。<br>如今软件行业都在提倡拥抱变化，而任务分解是我们拥抱变化的前提。<br><strong>动手做一个工作之前，请先对它进行任务分解。</strong></p>
+<h2 id="12-测试也是程序员的事吗？"><a href="#12-测试也是程序员的事吗？" class="headerlink" title="12 | 测试也是程序员的事吗？"></a>12 | 测试也是程序员的事吗？</h2><p>对于每个程序员来说，只有在开发阶段把代码和测试都写好，才有资格说，自己交付的是高质量的代码。<br>越是底层的测试，牵扯到相关内容越少，而高层测试则涉及面更广。<br>小事反馈周期短，而大事反馈周期长。<br>单元测试、集成测试、系统测试等等。越在底层测试，成本越低，执行越快；越在高层测试，成本越高，执行越慢。<br><strong>多写单元测试。</strong></p>
+<h2 id="13-先写测试，就是测试驱动开发吗？"><a href="#13-先写测试，就是测试驱动开发吗？" class="headerlink" title="13 | 先写测试，就是测试驱动开发吗？"></a>13 | 先写测试，就是测试驱动开发吗？</h2><p>测试驱动开发（Test Driven Development）<br>测试驱动开发和测试先行开发只差了一个词：驱动。<br>测试先行开发和测试驱动开发的差异就在重构上。因为重构和测试的互相配合，它会驱动着你把代码写得越来越好。这是对“驱动”一词最粗浅的理解。<br>如果我们把思路反过来，我有一个测试，怎么写代码能通过它。一旦你先思考测试，设计思路就完全变了：我的代码怎么写才是能测试的，也就是说，我们要编写具有可测试性的代码。<br>测试驱动开发的节奏：红——绿——重构。把测试放在前面，还带来了视角的转变，要编写可测的代码，为此，我们甚至需要调整设计，所以，有人也把 TDD 称为测试驱动设计。<br><strong>我们应该编写可测的代码。</strong></p>
+<h2 id="14-大师级程序员的工作秘笈"><a href="#14-大师级程序员的工作秘笈" class="headerlink" title="14 | 大师级程序员的工作秘笈"></a>14 | 大师级程序员的工作秘笈</h2><p>一个经过分解后的任务，需要关注的内容是有限的，我们就可以针对着这个任务，把方方面面的细节想得更加清晰。<br><strong>将任务拆小，越小越好。</strong></p>
+<h2 id="15-一起练习：手把手带你分解任务"><a href="#15-一起练习：手把手带你分解任务" class="headerlink" title="15 | 一起练习：手把手带你分解任务"></a>15 | 一起练习：手把手带你分解任务</h2><p>很多人可能更习惯一个类一个类的写，我要说，最好按照一个需求、一个需求的过程走，这样，任务是可以随时停下来的。<br>检验每个任务项是否拆分到位，就是看你是否知道它应该怎么做了。<br>每做完一个任务，代码都是可以提交的。<br><strong>按照完整实现一个需求的顺序去安排分解出来的任务。</strong></p>
+<h2 id="16-为什么你的测试不够好？"><a href="#16-为什么你的测试不够好？" class="headerlink" title="16 | 为什么你的测试不够好？"></a>16 | 为什么你的测试不够好？</h2><p>主要是因为这些测试不够简单。只有将复杂的测试拆分成简单的测试，测试才有可能做好。</p>
+<h3 id="简单的测试"><a href="#简单的测试" class="headerlink" title="简单的测试"></a>简单的测试</h3><p>把测试写简单，简单到一目了然，不需要证明它的正确性。<br>前置准备、执行、断言和清理</p>
+<h3 id="测试的坏味道"><a href="#测试的坏味道" class="headerlink" title="测试的坏味道"></a>测试的坏味道</h3><p>这个测试一旦出错，就需要把所有相关的几个方法都查看一遍，这无疑是增加了工作的复杂度。<br>测试一定要有断言。</p>
+<h3 id="一段旅程（A-TRIP）"><a href="#一段旅程（A-TRIP）" class="headerlink" title="一段旅程（A-TRIP）"></a>一段旅程（A-TRIP）</h3><p>好的测试标准：</p>
+</li>
+<li><p>Automatic，自动化；</p>
+</li>
+<li><p>Thorough，全面的；</p>
+</li>
+<li><p>Repeatable，可重复的；</p>
+</li>
+<li><p>Independent，独立的；</p>
+</li>
+<li><p>Professional，专业的。<br><strong>要想写好测试，就要写简单的测试。</strong></p>
+</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/" class="category-chain-item">技术栈</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/%E8%81%8C%E5%9C%BA/" class="category-chain-item">职场</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/%E8%81%8C%E5%9C%BA/%E6%96%B9%E6%B3%95%E8%AE%BA/" class="category-chain-item">方法论</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/" class="print-no-link">#方法论</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>10X程序员工作法</div>
+      <div>https://jiudc.github.io/2025/02/15/技术栈/职场/方法论/10X程序员工作法/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Charles</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年2月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/02/15/%E6%8A%80%E6%9C%AF%E6%A0%88/%E6%8A%80%E8%83%BD/Linux/Linux%E5%85%A5%E9%97%A8/" title="Linux入门">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Linux入门</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
